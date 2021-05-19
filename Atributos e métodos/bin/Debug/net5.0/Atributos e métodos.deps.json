@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "Atributos e métodos/1.0.0": {
+        "runtime": {
+          "Atributos e métodos.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Atributos e métodos/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

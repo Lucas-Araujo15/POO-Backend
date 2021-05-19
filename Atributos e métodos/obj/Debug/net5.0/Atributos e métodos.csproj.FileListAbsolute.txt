@@ -1,0 +1,16 @@
+C:\Users\Luisa Oliveira\Documents\LUCAS\POO\Atributos e métodos\bin\Debug\net5.0\Atributos e métodos.exe
+C:\Users\Luisa Oliveira\Documents\LUCAS\POO\Atributos e métodos\bin\Debug\net5.0\Atributos e métodos.deps.json
+C:\Users\Luisa Oliveira\Documents\LUCAS\POO\Atributos e métodos\bin\Debug\net5.0\Atributos e métodos.runtimeconfig.json
+C:\Users\Luisa Oliveira\Documents\LUCAS\POO\Atributos e métodos\bin\Debug\net5.0\Atributos e métodos.runtimeconfig.dev.json
+C:\Users\Luisa Oliveira\Documents\LUCAS\POO\Atributos e métodos\bin\Debug\net5.0\Atributos e métodos.dll
+C:\Users\Luisa Oliveira\Documents\LUCAS\POO\Atributos e métodos\bin\Debug\net5.0\ref\Atributos e métodos.dll
+C:\Users\Luisa Oliveira\Documents\LUCAS\POO\Atributos e métodos\bin\Debug\net5.0\Atributos e métodos.pdb
+C:\Users\Luisa Oliveira\Documents\LUCAS\POO\Atributos e métodos\obj\Debug\net5.0\Atributos e métodos.csprojAssemblyReference.cache
+C:\Users\Luisa Oliveira\Documents\LUCAS\POO\Atributos e métodos\obj\Debug\net5.0\Atributos e métodos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Luisa Oliveira\Documents\LUCAS\POO\Atributos e métodos\obj\Debug\net5.0\Atributos e métodos.AssemblyInfoInputs.cache
+C:\Users\Luisa Oliveira\Documents\LUCAS\POO\Atributos e métodos\obj\Debug\net5.0\Atributos e métodos.AssemblyInfo.cs
+C:\Users\Luisa Oliveira\Documents\LUCAS\POO\Atributos e métodos\obj\Debug\net5.0\Atributos e métodos.csproj.CoreCompileInputs.cache
+C:\Users\Luisa Oliveira\Documents\LUCAS\POO\Atributos e métodos\obj\Debug\net5.0\Atributos e métodos.dll
+C:\Users\Luisa Oliveira\Documents\LUCAS\POO\Atributos e métodos\obj\Debug\net5.0\ref\Atributos e métodos.dll
+C:\Users\Luisa Oliveira\Documents\LUCAS\POO\Atributos e métodos\obj\Debug\net5.0\Atributos e métodos.pdb
+C:\Users\Luisa Oliveira\Documents\LUCAS\POO\Atributos e métodos\obj\Debug\net5.0\Atributos e métodos.genruntimeconfig.cache
