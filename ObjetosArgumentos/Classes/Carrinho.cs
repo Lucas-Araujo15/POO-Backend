@@ -6,11 +6,20 @@ namespace ObjetosArgumentos.Classes
     {
         public float ValorTotal { get; set; }
 
-        List<Produto> carrinho = new List<Produto>();
+        public List<Produto> carrinho = new List<Produto>();
+        public List<Produto> maisTarde = new List<Produto>();
+        public List<Produto> comprado = new List<Produto>();
 
-        public void AdicionarProduto(Produto produto)
+        public void AdicionarProduto(Produto produto, int salvar)
         {
-            carrinho.Add(produto);
+            if (salvar == 0)
+            {
+                carrinho.Add(produto);
+            }
+            else
+            {
+                maisTarde.Add(produto);
+            }
         }
 
         public void RemoverProduto(Produto produto)
@@ -18,22 +27,43 @@ namespace ObjetosArgumentos.Classes
             carrinho.Remove(produto);
         }
 
-        public void Mostrar()
+        public void Mostrar(int list)
         {
-
-            if (carrinho != null)
+            Console.Clear();
+            if (list == 0)
             {
-                foreach (Produto item in carrinho)
+                if (carrinho != null)
                 {
-                    Console.ForegroundColor = ConsoleColor.Yellow;
-                    Console.WriteLine($"{item.preco:C2}\n{item.Nome}\n{item.codigo}\n");
-                    Console.ResetColor();
+                    Listagem(carrinho);
+                }
+                else
+                {
+                    Console.WriteLine("O carrinho está vazio");
+                }
+            }
+            else if (list == 1)
+            {
+                if (maisTarde != null)
+                {
+                    Listagem(maisTarde);
+                }
+                else
+                {
+                    Console.WriteLine("Não há nenhum produto salvo para mais tarde.");
                 }
             }
             else
             {
-                Console.WriteLine("O carrinho está vazio");
+                if (comprado != null)
+                {
+                    Listagem(comprado);
+                }
+                else
+                {
+                    Console.WriteLine("Nenhum produto foi comprado nos últimos meses.");
+                }
             }
+
         }
         public void MostrarTotal()
         {
@@ -58,6 +88,22 @@ namespace ObjetosArgumentos.Classes
         {
             carrinho.Find(item => item.codigo == _codigo).Nome = novoproduto.Nome;
             carrinho.Find(item => item.codigo == _codigo).preco = novoproduto.preco;
+        }
+        public void Listagem(List<Produto> test)
+        {
+            foreach (Produto item in test)
+            {
+                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.WriteLine($@"
+                        =================================
+                        |Preço: {item.preco:C2}
+                        =================================
+                        |Descrição: {item.Nome}
+                        =================================
+                        |Código: {item.codigo}
+                        =================================");
+                Console.ResetColor();
+            }
         }
     }
 }
