@@ -83,33 +83,43 @@ namespace ObjetosArgumentos
 
                         break;
                     case "3":
-                        do
+
+                        if (car.carrinho.Count > 0)
+                        {
+                            do
+                            {
+                                Console.Clear();
+                                car.Mostrar(0);
+                                Console.Write("Digite o código do produto que deseja alterar: ");
+                                int code = int.Parse(Console.ReadLine());
+
+                                Console.Clear();
+                                Console.Write("Digite um novo nome: ");
+                                string name2 = Console.ReadLine();
+
+                                Console.Write("Digite um novo preço: ");
+                                float price2 = float.Parse(Console.ReadLine());
+
+                                car.AlterarProduto(code, new Produto(code, name2, price2));
+
+                                Console.WriteLine("Produto alterado com sucesso!");
+
+                                Console.Write("Deseja alterar mais algum produto?(s/n) ");
+                                string resposta = Console.ReadLine().ToLower();
+
+                                if (resposta == "s")
+                                {
+                                    repetir2 = true;
+                                }
+
+                            } while (repetir2);
+                        }
+                        else
                         {
                             Console.Clear();
-                            car.Mostrar(0);
-                            Console.Write("Digite o código do produto que deseja alterar: ");
-                            int code = int.Parse(Console.ReadLine());
-
-                            Console.Clear();
-                            Console.Write("Digite um novo nome: ");
-                            string name2 = Console.ReadLine();
-
-                            Console.Write("Digite um novo preço: ");
-                            float price2 = float.Parse(Console.ReadLine());
-
-                            car.AlterarProduto(code, new Produto(code, name2, price2));
-
-                            Console.WriteLine("Produto alterado com sucesso!");
-
-                            Console.Write("Deseja alterar mais algum produto?(s/n) ");
-                            string resposta = Console.ReadLine().ToLower();
-
-                            if (resposta == "s")
-                            {
-                                repetir2 = true;
-                            }
-
-                        } while (repetir2);
+                            Console.WriteLine("O carrinho está vazio!");
+                            Thread.Sleep(3000);
+                        }
                         break;
 
                     case "4":
@@ -134,7 +144,7 @@ namespace ObjetosArgumentos
                                 car.Mostrar(1);
                                 Thread.Sleep(5000);
 
-                                if (car.maisTarde != null)
+                                if (car.maisTarde.Count > 0)
                                 {
                                     Console.WriteLine("Deseja adicionar algum produto para o carrinho? (s/n) ");
 
@@ -145,6 +155,12 @@ namespace ObjetosArgumentos
                                         car.AdicionarProduto(car.maisTarde.Find(item => item.codigo == cod), 0);
                                         car.maisTarde.RemoveAll(item => item.codigo == cod);
                                     }
+                                }
+                                else
+                                {
+                                    Console.Clear();
+                                    Console.WriteLine("Nenhum item foi adicionado a esta lista.");
+                                    Thread.Sleep(3000);
                                 }
                                 break;
 
@@ -183,19 +199,29 @@ namespace ObjetosArgumentos
                         }
                         break;
                     case "5":
-                        car.Mostrar(2);
-                        Console.Write("Digite o código do produto que deseja comprar novamente: ");
-                        car.AdicionarProduto(car.comprado.Find(item => item.codigo == int.Parse(Console.ReadLine())), 0);
-                        Console.Clear();
-                        Console.WriteLine("Produto adicionado ao carrinho!");
-                        Thread.Sleep(3000);
+                        if (car.comprado.Count > 0)
+                        {
+                            car.Mostrar(2);
+                            Console.Write("Digite o código do produto que deseja comprar novamente: ");
+                            car.AdicionarProduto(car.comprado.Find(item => item.codigo == int.Parse(Console.ReadLine())), 0);
+                            Console.Clear();
+                            Console.WriteLine("Produto adicionado ao carrinho!");
+                            Thread.Sleep(3000);
+                        }
+                        else
+                        {
+                            Console.Clear();
+                            Console.WriteLine("Nenhum item foi  comprado recentemente.");
+                            Thread.Sleep(3000);
+                        }
+
 
                         break;
                     case "6":
                         Console.Clear();
                         car.Mostrar(0);
                         car.MostrarTotal();
-                        if (car.carrinho != null)
+                        if (car.carrinho.Count > 0)
                         {
                             Console.Write("Deseja comprar definitivamente? (s/n) ");
 
@@ -232,22 +258,6 @@ namespace ObjetosArgumentos
                 }
 
             } while (repetir);
-
-
-            //Produto product1 = new Produto(1, "Read Dead Redemption 2", 220f);
-            //Produto product2 = new Produto(2, "GTA V", 59f);
-            //Produto product3 = new Produto(3, "Detroit Become Human", 50f);
-            //Produto product4 = new Produto(4, "Celeste", 22.99f);
-
-
-
-            //car.AdicionarProduto(product1, 0);
-            //car.AdicionarProduto(product2, 0);
-            //car.AdicionarProduto(product3, 0);
-            //car.AdicionarProduto(product4, 0);
-
-
-            //car.MostrarTotal();
         }
     }
 }

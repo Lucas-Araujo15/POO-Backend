@@ -1,4 +1,5 @@
 ﻿using System;
+using Métodos_Estáticos.Classes;
 
 namespace Métodos_Estáticos
 {
@@ -6,7 +7,8 @@ namespace Métodos_Estáticos
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine(Conversor.DolarParaReais(52) );
+            Console.WriteLine(Conversor.RealParaDolar(52) );
         }
     }
 }

@@ -32,7 +32,7 @@ namespace ObjetosArgumentos.Classes
             Console.Clear();
             if (list == 0)
             {
-                if (carrinho != null)
+                if (carrinho.Count > 0)
                 {
                     Listagem(carrinho);
                 }
@@ -54,7 +54,7 @@ namespace ObjetosArgumentos.Classes
             }
             else
             {
-                if (comprado != null)
+                if (comprado.Count > 0)
                 {
                     Listagem(comprado);
                 }
@@ -68,7 +68,7 @@ namespace ObjetosArgumentos.Classes
         public void MostrarTotal()
         {
             Console.ForegroundColor = ConsoleColor.Red;
-            if (carrinho != null)
+            if (carrinho.Count > 0)
             {
                 foreach (Produto item in carrinho)
                 {
@@ -82,6 +82,7 @@ namespace ObjetosArgumentos.Classes
                 Console.WriteLine("O carrinho está vazio");
             }
             Console.ResetColor();
+            ValorTotal = 0;
         }
 
         public void AlterarProduto(int _codigo, Produto novoproduto)
